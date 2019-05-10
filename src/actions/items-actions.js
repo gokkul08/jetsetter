@@ -5,13 +5,21 @@ export const addNewItem = (value) => ({
   type: ADD_NEW_ITEM,
   item: {
     id: uniqueId(),
-    packed: false,
+    packed: false,  
     value,
   }
 });
 
-export const toggleItem = () => ({});
+export const toggleItem = (id) => ({
+  type: TOGGLE_ITEM,
+  id,
+});
 
-export const removeItem = () => ({});
+export const removeItem = (id) => ({
+  type: REMOVE_ITEM,
+  id,
+});
 
-export const markAllAsUnpacked = () => ({});
+export const markAllAsUnpacked = () => ({
+  type: MARK_ALL_AS_UNPACKED,
+})
